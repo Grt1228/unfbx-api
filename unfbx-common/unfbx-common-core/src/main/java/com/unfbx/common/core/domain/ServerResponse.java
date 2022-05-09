@@ -1,6 +1,6 @@
-package com.unfbx.common.core;
+package com.unfbx.common.core.domain;
 
-import com.unfbx.common.constant.Constant;
+import com.unfbx.common.core.constant.Constants;
 
 import java.io.Serializable;
 
@@ -16,8 +16,8 @@ public class ServerResponse<T> implements Serializable {
     private T data;
 
     public enum Type {
-        SUCCESS(0, Constant.SUCCESS),
-        ERROR(500,Constant.ERROR),
+        SUCCESS(0, Constants.SUCCESS),
+        ERROR(500, Constants.ERROR),
         ;
         private final int value;
         private final String desc;

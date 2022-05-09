@@ -1,4 +1,4 @@
-package com.unfbx.common.constant;
+package com.unfbx.common.core.constant;
 
 /**
  * 描述：
@@ -6,7 +6,7 @@ package com.unfbx.common.constant;
  * @author grt
  * @date 2022-05-06
  */
-public class Constant {
+public class Constants {
 
     public static String SUCCESS = "成功";
 

@@ -10,6 +10,10 @@
     <artifactId>unfbx-common</artifactId>
     <description>common</description>
 
+    <modules>
+        <module>unfbx-common-core</module>
+    </modules>
+
     <dependencies>
         <!-- Spring框架基本的核心工具 -->
         <dependency>
