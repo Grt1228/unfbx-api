@@ -26,3 +26,42 @@ create table tb_api
         primary key (id)
 );
 
+-- Api访问总次数  直接存redis
+-- Api每日访问量统计表，存redis8小时同步数据库一次
+-- 需要支持主动同步，通过日期+id
+create table tb_api_data
+(
+    id          int auto_increment,
+    api_id      int          not null comment 'api主键id',
+    api_name    varchar(128) not null comment 'api名称',
+    num         int          not null default 0 comment '次数',
+    data_date   date         not null comment '数据日期',
+    status      tinyint(1) not null default 1 comment '状态：1正常，0禁用',
+    deleted     tinyint(1) not null default 1 comment '删除：1正常，0删除',
+    create_time datetime     not null default CURRENT_TIMESTAMP,
+    modify_time datetime     not null default CURRENT_TIMESTAMP,
+    create_user varchar(128) not null,
+    modify_user varchar(128) not null,
+    constraint tb_api_pk
+        primary key (id)
+);
+
+
+create table tb_api_log
+(
+    id          int auto_increment,
+    api_id      int          not null comment 'api主键id',
+    api_name    varchar(128) not null comment 'api名称',
+    ip          varchar(15)  not null comment 'ip',
+    resp_code   varchar(15)  not null comment '返回code',
+    resp_msg    varchar(128) not null comment '返回信息',
+    success     tinyint(1) not null default 1 comment '状态：1成功，0失败',
+    status      tinyint(1) not null default 1 comment '状态：1正常，0禁用',
+    deleted     tinyint(1) not null default 1 comment '删除：1正常，0删除',
+    create_time datetime     not null default CURRENT_TIMESTAMP,
+    modify_time datetime     not null default CURRENT_TIMESTAMP,
+    create_user varchar(128) not null,
+    modify_user varchar(128) not null,
+    constraint tb_api_pk
+        primary key (id)
+);

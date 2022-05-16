@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.unfbx</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>unfbx</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -15,6 +15,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <druid.version>1.2.8</druid.version>
+        <spring.boot.version>2.6.7</spring.boot.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <fastjson2.version>2.0.2</fastjson2.version>
         <commons.io.version>2.11.0</commons.io.version>
@@ -25,7 +26,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.6.7</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -60,6 +61,7 @@
     <modules>
         <module>unfbx-common</module>
         <module>unfbx-auth</module>
+        <module>unfbx-modules</module>
     </modules>
     <packaging>pom</packaging>
 
