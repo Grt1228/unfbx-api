@@ -1,5 +1,8 @@
 package com.unfbx.common.core.domain;
 
+import com.unfbx.common.core.enums.OrderByFlag;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
@@ -11,7 +14,7 @@ public class PageRequest {
 
     private String orderBy;
 
-    private String orderByFlag;
+    private int orderByFlag;
 
     public Integer getPageNum() {
         return pageNum;
@@ -30,20 +33,22 @@ public class PageRequest {
     }
 
     public String getOrderBy() {
-        return orderBy;
+        if(StringUtils.isBlank(orderBy)){
+            return "";
+        }
+        return orderBy + " " + OrderByFlag.getStr(orderByFlag);
     }
 
     public void setOrderBy(String orderBy) {
         this.orderBy = orderBy;
     }
 
-    public String getOrderByFlag() {
+    public int getOrderByFlag() {
         return orderByFlag;
     }
 
-    public void setOrderByFlag(String orderByFlag) {
+    public void setOrderByFlag(int orderByFlag) {
         this.orderByFlag = orderByFlag;
     }
-
 }
 

@@ -15,18 +15,37 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <druid.version>1.2.8</druid.version>
-        <spring.boot.version>2.6.7</spring.boot.version>
+        <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot.version>2.6.7</spring-boot.version>
+        <alibaba-nacos.version>2.1.0</alibaba-nacos.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <fastjson2.version>2.0.2</fastjson2.version>
         <commons.io.version>2.11.0</commons.io.version>
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!-- SpringBoot的依赖配置-->
+            <!-- Spring alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--Nacos-->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${alibaba-nacos.version}</version>
+            </dependency>
+
+
+            <!-- SpringBoot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

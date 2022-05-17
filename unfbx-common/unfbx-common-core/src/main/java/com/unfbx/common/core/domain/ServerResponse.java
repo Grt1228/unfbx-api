@@ -16,7 +16,7 @@ public class ServerResponse<T> implements Serializable {
     private T data;
 
     public enum Type {
-        SUCCESS(0, Constants.SUCCESS),
+        SUCCESS(200, Constants.SUCCESS),
         ERROR(500, Constants.ERROR),
         ;
         private final int value;
