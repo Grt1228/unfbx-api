@@ -95,6 +95,7 @@
         <module>unfbx-common</module>
         <module>unfbx-auth</module>
         <module>unfbx-modules</module>
+        <module>unfbx-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
