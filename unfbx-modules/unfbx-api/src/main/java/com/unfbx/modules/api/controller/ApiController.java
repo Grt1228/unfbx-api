@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/")
+@RestController
 @Slf4j
 public class ApiController {
 
     @Autowired
     private ApiService apiService;
 
-    @PostMapping
+    @PostMapping(value = "/distance")
     public ServerResponse<DistanceResp> distance(@RequestBody DistanceReq req){
         DistanceResp resp = apiService.distance(req);
         return ServerResponse.success(resp);
