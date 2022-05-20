@@ -68,4 +68,40 @@ public class BaseEntity {
     public void setModifyUser(String modifyUser) {
         this.modifyUser = modifyUser;
     }
+
+    /**
+     * 状态：1正常，0禁用
+     */
+    public enum Status {
+        NORMAL(1),
+        DISABLED(0),
+        ;
+        private int code;
+
+        Status(int code) {
+            this.code = code;
+        }
+
+        public int code() {
+            return code;
+        }
+    }
+
+    /**
+     * 删除：1正常，0删除
+     */
+    public enum Deleted {
+        NORMAL(1),
+        DELETED(0),
+        ;
+        private int code;
+
+        Deleted(int code) {
+            this.code = code;
+        }
+
+        public int code() {
+            return code;
+        }
+    }
 }

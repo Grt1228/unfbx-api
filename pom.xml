@@ -23,9 +23,17 @@
         <fastjson2.version>2.0.2</fastjson2.version>
         <commons.io.version>2.11.0</commons.io.version>
         <unfbx-common-core.version>1.0.0</unfbx-common-core.version>
+        <mica.version>2.6.7</mica.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>net.dreamlu</groupId>
+                <artifactId>mica-bom</artifactId>
+                <version>${mica.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -95,6 +103,7 @@
         <module>unfbx-common</module>
         <module>unfbx-auth</module>
         <module>unfbx-modules</module>
+        <module>unfbx-gateway</module>
     </modules>
     <packaging>pom</packaging>
 

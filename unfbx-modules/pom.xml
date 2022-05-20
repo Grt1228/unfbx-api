@@ -13,6 +13,7 @@
 
     <modules>
         <module>unfbx-api</module>
+        <module>unfbx-ipPool</module>
     </modules>
     <packaging>pom</packaging>
 
