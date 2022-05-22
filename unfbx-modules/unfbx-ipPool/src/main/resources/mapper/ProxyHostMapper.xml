@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unfbx.modules.ippool.mapper.ProxyHostMapper">
+    <resultMap id="BaseResultMap" type="com.unfbx.modules.ippool.entity.ProxyHost">
+        <!--@mbg.generated-->
+        <!--@Table tb_Proxy_Host-->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="ip" jdbcType="VARCHAR" property="ip" />
+        <result column="port" jdbcType="VARCHAR" property="port" />
+        <result column="type" jdbcType="VARCHAR" property="type" />
+        <result column="area" jdbcType="VARCHAR" property="area" />
+        <result column="verify_time" jdbcType="TIMESTAMP" property="verifyTime" />
+        <result column="status" jdbcType="BOOLEAN" property="status" />
+        <result column="deleted" jdbcType="BOOLEAN" property="deleted" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+        <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+        <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, `ip`, port, type, area, verify_time,
+        `status`, deleted, create_time, modify_time, create_user, modify_user
+    </sql>
+    <insert id="batchInsert" >
+        INSERT INTO tb_proxy_host
+        (ip, port,type,area,verify_time,create_user,modify_user)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.ip}, #{item.ip}, #{item.type}, #{item.area}, #{item.verify_time},'-1','-1')
+        </foreach>
+    </insert>
+</mapper>
