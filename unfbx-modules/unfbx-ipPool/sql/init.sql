@@ -26,7 +26,7 @@ create table tb_proxy_host
     port        varchar(8)   not null comment '端口',
     type        varchar(16)           default null comment '类型：http, https',
     area        varchar(32)           default null comment '代理地区',
-    verify_time datetime(32) not null default CURRENT_TIMESTAMP comment '验证时间',
+    verify_time datetime     not null default CURRENT_TIMESTAMP comment '验证时间',
     status      tinyint(1)   not null default 1 comment '状态：1正常，0禁用',
     deleted     tinyint(1)   not null default 1 comment '删除：1正常，0删除',
     create_time datetime     not null default CURRENT_TIMESTAMP,

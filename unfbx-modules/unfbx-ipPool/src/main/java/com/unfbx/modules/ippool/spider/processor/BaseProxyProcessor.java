@@ -30,17 +30,17 @@ public abstract  class BaseProxyProcessor implements PageProcessor {
      * 带URL参数的抽象方法
      * @param urls
      */
-    public abstract void start(String... urls);
+    public abstract void start(ProxyHostPipeline pipeline, String... urls);
 
     /**
      *内置URL参数的抽象方法
      */
-    public abstract void start();
+    public abstract void start(ProxyHostPipeline pipeline);
 
-    protected static void run(BaseProxyProcessor proxyProcessor, String... urls) {
+    protected static void run(BaseProxyProcessor proxyProcessor,ProxyHostPipeline pipeline, String... urls) {
         Spider.create(proxyProcessor)
             .addUrl(urls)
-            .addPipeline(new ProxyHostPipeline())
+            .addPipeline(pipeline)
             //开启5个线程抓取
             .thread(1)
             //启动爬虫
