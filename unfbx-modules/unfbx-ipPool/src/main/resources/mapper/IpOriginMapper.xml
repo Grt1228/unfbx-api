@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.unfbx.modules.ippool.mapper.IpOriginMapper">
-  <resultMap id="BaseResultMap" type="com.unfbx.modules.ippool.entity.IpOrigin">
-    <!--@mbg.generated-->
-    <!--@Table tb_ip_origin-->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="icon" jdbcType="VARCHAR" property="icon" />
-    <result column="status" jdbcType="BOOLEAN" property="status" />
-    <result column="deleted" jdbcType="BOOLEAN" property="deleted" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
-    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
-    <result column="modify_user" jdbcType="VARCHAR" property="modifyUser" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    id, url, `name`, icon, `status`, deleted, create_time, modify_time, create_user, 
-    modify_user
-  </sql>
+    <resultMap id="BaseResultMap" type="com.unfbx.modules.ippool.entity.IpOrigin">
+        <!--@mbg.generated-->
+        <!--@Table tb_ip_origin-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="full_class" jdbcType="VARCHAR" property="fullClass"/>
+        <result column="status" jdbcType="BOOLEAN" property="status"/>
+        <result column="deleted" jdbcType="BOOLEAN" property="deleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="modify_user" jdbcType="VARCHAR" property="modifyUser"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, url, `name`, icon,full_class, `status`, deleted, create_time, modify_time, create_user,
+        modify_user
+    </sql>
 </mapper>

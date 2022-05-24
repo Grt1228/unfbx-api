@@ -39,6 +39,12 @@ public class ProxyHost extends BaseEntity implements Serializable {
     private String type;
 
     /**
+     * 1-高匿，2-普匿，3-不匿
+     */
+    @TableField(value = "anonymous")
+    private Integer anonymous;
+
+    /**
      * 地区
      */
     @TableField(value = "area")
@@ -63,6 +69,31 @@ public class ProxyHost extends BaseEntity implements Serializable {
 
         public String code() {
             return code;
+        }
+    }
+
+    /**
+     * 1-高匿，2-普匿，3-不匿
+     */
+    public enum Anonymous {
+        HIGH(1,"高匿"),
+        ORDINARY(2,"普匿"),
+        NOT(3,"不匿"),
+        ;
+        private int code;
+        private String value;
+
+        Anonymous(int code,String value) {
+            this.code = code;
+            this.value = value;
+        }
+
+        public int code() {
+            return code;
+        }
+
+        public String value() {
+            return value;
         }
     }
 }

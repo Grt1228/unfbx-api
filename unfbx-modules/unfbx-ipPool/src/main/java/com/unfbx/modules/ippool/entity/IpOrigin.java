@@ -46,8 +46,8 @@ public class IpOrigin extends BaseEntity implements Serializable {
     /**
      * 调用方法
      */
-    @TableField(value = "method")
-    private String method;
+    @TableField(value = "full_class")
+    private String fullClass;
 
     private static final long serialVersionUID = 1L;
 }

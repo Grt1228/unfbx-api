@@ -24,6 +24,7 @@
         <commons.io.version>2.11.0</commons.io.version>
         <unfbx-common-core.version>1.0.0</unfbx-common-core.version>
         <mica.version>2.6.7</mica.version>
+        <xxljob.version>2.3.1</xxljob.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -88,6 +89,11 @@
             </dependency>
 
             <!-- 定时任务-->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxljob.version}</version>
+            </dependency>
             <!-- 核心模块-->
             <!-- 系统模块-->
             <dependency>

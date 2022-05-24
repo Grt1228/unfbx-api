@@ -8,6 +8,7 @@
         <result column="ip" jdbcType="VARCHAR" property="ip" />
         <result column="port" jdbcType="VARCHAR" property="port" />
         <result column="type" jdbcType="VARCHAR" property="type" />
+        <result column="anonymous" jdbcType="INTEGER" property="anonymous" />
         <result column="area" jdbcType="VARCHAR" property="area" />
         <result column="verify_time" jdbcType="TIMESTAMP" property="verifyTime" />
         <result column="status" jdbcType="BOOLEAN" property="status" />
@@ -19,15 +20,15 @@
     </resultMap>
     <sql id="Base_Column_List">
         <!--@mbg.generated-->
-        id, `ip`, port, type, area, verify_time,
+        id, `ip`, port, type, area, verify_time,anonymous,
         `status`, deleted, create_time, modify_time, create_user, modify_user
     </sql>
     <insert id="batchInsert" >
         INSERT INTO tb_proxy_host
-        (ip, port,type,area,verify_time,create_user,modify_user)
+        (ip, port,type,area,verify_time,anonymous,create_user,modify_user)
         VALUES
         <foreach collection="list" item="item" separator=",">
-            (#{item.ip}, #{item.port}, #{item.type}, #{item.area}, #{item.verifyTime},'-1','-1')
+            (#{item.ip}, #{item.port}, #{item.type}, #{item.area}, #{item.verifyTime},#{item.anonymous},'-1','-1')
         </foreach>
     </insert>
 </mapper>
