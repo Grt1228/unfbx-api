@@ -22,7 +22,7 @@
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <fastjson2.version>2.0.2</fastjson2.version>
         <commons.io.version>2.11.0</commons.io.version>
-        <unfbx-common-core.version>1.0.0</unfbx-common-core.version>
+        <unfbx.version>1.0.0</unfbx.version>
         <mica.version>2.6.7</mica.version>
         <xxljob.version>2.3.1</xxljob.version>
     </properties>
@@ -99,7 +99,13 @@
             <dependency>
                 <groupId>com.unfbx</groupId>
                 <artifactId>unfbx-common-core</artifactId>
-                <version>${unfbx-common-core.version}</version>
+                <version>${unfbx.version}</version>
+            </dependency>
+            <!-- 系统接口 -->
+            <dependency>
+                <groupId>com.unfbx</groupId>
+                <artifactId>unfbx-remote-ipPool</artifactId>
+                <version>${unfbx.version}</version>
             </dependency>
             <!-- 通用工具-->
 
