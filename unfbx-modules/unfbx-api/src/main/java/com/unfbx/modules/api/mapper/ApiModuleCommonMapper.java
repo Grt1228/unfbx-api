@@ -8,4 +8,7 @@ public interface ApiModuleCommonMapper {
 
     @Select("SELECT ST_Distance_Sphere(POINT(#{req.longitudeStart}, #{req.latitudeStart}), POINT(#{req.longitudeEnd}, #{req.latitudeEnd})) AS distant")
     Integer selectDistance(@Param("req") DistanceReq req);
+
+    void selectDistrict();
+
 }

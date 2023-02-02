@@ -12,6 +12,7 @@
 
     <modules>
         <module>unfbx-common-core</module>
+        <module>unfbx-common-web</module>
     </modules>
 
     <dependencies>

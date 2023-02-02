@@ -65,3 +65,19 @@ create table tb_api_log
     constraint tb_api_pk
         primary key (id)
 );
+
+create table tb_district
+(
+    id          int auto_increment,
+    data        json                                 not null comment '高德查询的数据',
+    date_node   date                                 not null comment '获取数据的时间',
+    status      tinyint(1) default 1                 not null comment '状态：1正常，0禁用',
+    deleted     tinyint(1) default 1                 not null comment '删除：1正常，0删除',
+    create_time datetime   default CURRENT_TIMESTAMP not null,
+    modify_time datetime   default CURRENT_TIMESTAMP not null,
+    create_user varchar(128)                         not null,
+    modify_user varchar(128)                         not null,
+    constraint tb_district_pk
+        primary key (id)
+);
+

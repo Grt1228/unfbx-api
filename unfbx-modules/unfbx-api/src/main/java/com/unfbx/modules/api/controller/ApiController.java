@@ -1,5 +1,6 @@
 package com.unfbx.modules.api.controller;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.unfbx.common.core.domain.ServerResponse;
 import com.unfbx.modules.api.controller.request.DistanceReq;
 import com.unfbx.modules.api.controller.request.IpReq;
@@ -31,5 +32,11 @@ public class ApiController {
     public ServerResponse<String> ipToDistrict (@RequestBody @Valid IpReq req){
         IpInfo resp = apiService.ipToDistrict(req);
         return ServerResponse.success(resp.getAddressAndIsp());
+    }
+
+    @PostMapping(value = "/district")
+    public ServerResponse<JSONObject> district (){
+        JSONObject resp = apiService.district();
+        return ServerResponse.success(resp);
     }
 }

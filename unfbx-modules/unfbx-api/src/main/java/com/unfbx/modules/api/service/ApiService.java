@@ -1,5 +1,6 @@
 package com.unfbx.modules.api.service;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.unfbx.modules.api.controller.request.DistanceReq;
 import com.unfbx.modules.api.controller.request.IpReq;
 import com.unfbx.modules.api.controller.response.DistanceResp;
@@ -21,4 +22,11 @@ public interface ApiService extends IService<Api>{
      * @return
      */
     IpInfo ipToDistrict(IpReq req);
+
+    /**
+     * 最新省市区信息
+     * @return
+     */
+    JSONObject district();
+
 }

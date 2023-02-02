@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>unfbx-job</name>
-    <artifactId>unfbx-modules-job</artifactId>
+    <artifactId>unfbx-job</artifactId>
     <description>job模块</description>
 
     <dependencies>

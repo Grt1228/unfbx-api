@@ -14,6 +14,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+        <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-ip2region</artifactId>
         </dependency>
@@ -28,6 +32,10 @@
         <dependency>
             <groupId>com.unfbx</groupId>
             <artifactId>unfbx-common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.unfbx</groupId>
+            <artifactId>unfbx-common-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
