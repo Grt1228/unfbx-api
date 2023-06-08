@@ -13,6 +13,8 @@
     <modules>
         <module>unfbx-common-core</module>
         <module>unfbx-common-web</module>
+        <!--京东异步编排框架，源码集成-->
+        <module>jd-asyncTool</module>
     </modules>
 
     <dependencies>

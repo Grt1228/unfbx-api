@@ -12,6 +12,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.unfbx</groupId>
+            <artifactId>jd-asyncTool</artifactId>
+        </dependency>
+        <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot-starter</artifactId>
         </dependency>

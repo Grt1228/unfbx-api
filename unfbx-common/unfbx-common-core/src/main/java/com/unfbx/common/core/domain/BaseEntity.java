@@ -6,12 +6,12 @@ public class BaseEntity {
     /**
      * 状态：1正常，0禁用
      */
-    private Boolean status;
+    private Integer status;
 
     /**
      * 删除：1正常，0删除
      */
-    private Boolean deleted;
+    private Integer deleted;
 
     private Date createTime;
 
@@ -21,19 +21,19 @@ public class BaseEntity {
 
     private String modifyUser;
 
-    public Boolean getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public Boolean getDeleted() {
+    public Integer getDeleted() {
         return deleted;
     }
 
-    public void setDeleted(Boolean deleted) {
+    public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
 

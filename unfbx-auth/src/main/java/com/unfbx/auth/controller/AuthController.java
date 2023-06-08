@@ -1,26 +1,28 @@
 package com.unfbx.auth.controller;
 
-import cn.dev33.satoken.stp.SaLoginConfig;
 import cn.dev33.satoken.stp.StpUtil;
+import com.unfbx.auth.controller.req.LoginNameLoginReq;
+import com.unfbx.auth.controller.resp.LoginResp;
+import com.unfbx.auth.service.UserService;
 import com.unfbx.common.core.domain.ServerResponse;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 
 @RestController
 @RequestMapping("")
 public class AuthController {
-    // 测试登录
+
+    private final UserService userService;
+
+    public AuthController(UserService userService) {
+        this.userService = userService;
+    }
+
+    // 登录
     @PostMapping("/login")
-    public ServerResponse login() {
-        StpUtil.login(10001, SaLoginConfig
-                .setExtra("name", "旺旺")
-                .setExtra("age", 18)
-                .setExtra("role", Arrays.asList("管理员")));
-        return ServerResponse.success(StpUtil.getTokenInfo().getTokenValue());
+    public ServerResponse<LoginResp> login(@RequestBody LoginNameLoginReq req) {
+        LoginResp resp = userService.login(req);
+        return ServerResponse.success(resp);
     }
 
     @GetMapping("/logout")
